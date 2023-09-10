@@ -24,7 +24,7 @@ pip install microservice_setup
 Clone this repository and navigate into the directory:
 
 ```bash
-git clone https://github.com/[Your-Username]/microservice_setup.git
+git clone https://github.com/DoMo-98/microservice_setup.git
 cd microservice_setup
 ```
 
