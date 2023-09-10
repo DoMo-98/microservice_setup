@@ -7,14 +7,14 @@ import re
 
 import src.exceptions as exceptions
 
-def is_valid_name(name: str):
+def is_valid_name(name: str) -> bool:
     """
     Validate project name.
     """
     return re.match(r'^\w+$', name) is not None
 
 
-def check_project_name(name: str):
+def check_project_name(name: str) -> None:
     """
     Check if the project name is valid.
     """

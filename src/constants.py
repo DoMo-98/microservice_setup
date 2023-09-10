@@ -23,3 +23,6 @@ SUFIX_SERVICE = "_service"
 
 # Files
 INIT_FILE = "__init__.py"
+
+# Names
+SERVICE_NAMES = "service_names"
