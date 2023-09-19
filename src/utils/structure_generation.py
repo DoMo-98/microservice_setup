@@ -43,6 +43,6 @@ def generate_hexagonal_structure(service_names: str) -> dict:
         # Hexagonal modular architecture
         hexagonal_structure[project_name] = deepcopy(root_structure)
 
-        replace_service_name(hexagonal_structure[project_name], project_name)
+        replace_service_name(hexagonal_structure[project_name], service_name)
 
     return hexagonal_structure

@@ -6,45 +6,63 @@ Microservice Setup is a Python-based Command-Line Interface (CLI) tool aimed to 
 
 ## Features
 
-- Auto-generates a clean and scalable microservices project skeleton
+- Auto-generates a clean and scalable microservice project skeleton
 - Built around hexagonal architecture principles
-- Allows for easy customization to include user-defined modules
+- Allows for customization of the project's generated structure through JSON template modification
 - Works with Python 3.9 or later
+
+## Requirements
+
+### General
+
+- Python 3.9 or later: Required for running the tool. Make sure it's installed on your system.
+
+### For Advanced Customization
+
+- Poetry: Necessary for building and packaging if you're customizing the JSON templates. [Installation guide here](https://python-poetry.org/docs/#installation).
 
 ## Installation
 
 ### Via pip
 
+To quickly get started, install Microservice Setup using pip and initialize your microservices project:
+
 ```bash
 pip install microservice_setup
+ms-init example
 ```
 
-### Clone Repository
+### Advanced Customization
 
-Clone this repository and navigate into the directory:
+For those who wish to customize the JSON templates used for generating the project skeleton, you can clone this repository and modify the JSON files directly:
+
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/DoMo-98/microservice_setup.git
+    cd microservice_setup
+    ```
+  
+2. **Navigate and Modify JSON Templates**:
+    Go to `src/templates` and modify `base_structure.json` and/or `root_structure.json` as needed.
+
+3. **Build and Install Locally**:
+    Ensure you are in the root directory of the cloned repository. Then build the package and install it locally with the following commands:
+    ```bash
+    poetry build
+    pip install dist/microservice_setup-<your_version>-py3-none-any.whl
+    ```
+
+Replace `<your_version>` with the actual version number generated after running `poetry build`.
+
+### Usage
+
+After installation through either method, initialize your microservices project by running:
 
 ```bash
-git clone https://github.com/DoMo-98/microservice_setup.git
-cd microservice_setup
+ms-init example
 ```
 
-## Usage
-
-After installation, you can initialize your microservices project in one of two ways:
-
-1. Via pip installation:
-
-    ```bash
-    ms-init example
-    ```
-
-2. Via Python module:
-
-    ```bash
-    python -m src.main example
-    ```
-
-Follow the prompts to set up your project.
+This command initializes a new microservices project and creates a directory structure within a folder named `example_service`. You can replace `example` with the name of your choice for your microservices project.
 
 ## Generated Structure
 
@@ -86,14 +104,6 @@ example_service/
 ```
 
 This structure adheres to the principles of hexagonal architecture and DDD, providing a clear and maintainable outline for your microservice.
-
-## Requirements
-
-- Python 3.9 or later
-
-## Dependencies
-
-To be added based on your project's needs.
 
 ## Author
 
