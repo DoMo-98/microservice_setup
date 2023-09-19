@@ -66,7 +66,7 @@ This command initializes a new microservices project and creates a directory str
 
 ## Generated Structure
 
-When you run `microservice_setup`, the following directory structure will be generated:
+When you run the `ms-init example` command, the following directory structure will be generated:
 
 ```plaintext
 example_service/
